@@ -1,0 +1,5 @@
+We tested the design using simulation, viewing the waveform to ensure our signals went high at the right times and also creating an accurate testbench that would output if certain areas would fail or pass. 
+To fix our design in order to meet the timing constraint, we took a look in the timing analyzer and viewed where it was taking the longest. One of the most crucial points was adding a flipflop between the FIFO output and the MAC. This drastically reduced our negative slack.
+We tested the design on board by checking if our design was programmed correctly. Initially our board displayed incorrect values on the 7 segment display. After debugging we were able to correct the value. 
+Lastly, we ensured our design correctly interfaced with Avalon MM. We used signaltap to check the values being fetched from memory were correct. To do this we set the trigger of memory address to 00000001h and memread to high. Running the compilation with the signaltap module we were able to view that the correct values were being fetched.
+We faced many difficulties but we used the tools and methods provided to debug through them and eventually get a correctly functioning minilab1.
